@@ -14,7 +14,7 @@ public class FileReaderMain {
         String fileName = "Sample";
         FileReader fileReader = new FileReader();
 
-        List<String> oldList = fileReader.streamToList(fileReader.fileToStream(fileName), new ArrayList<String>());
+        List<String> oldList = fileReader.streamToList(fileReader.fileToStream(fileName));
         System.out.println("Sorted List ..");
         List<String> sortedList = fileReader.sortedList(oldList);
 

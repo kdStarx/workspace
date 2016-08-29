@@ -21,7 +21,7 @@ public class FileReader {
     }
 
     // Add lines to existing list
-    private List<String> linesList(String line) {
+    public List<String> linesToList(String line) {
         System.out.println("Size of list before reading line "+linesList.size());
         System.out.println("Line to be added "+line);
         linesList.add(line);
@@ -35,11 +35,12 @@ public class FileReader {
         return stream;
     }
 
-    public List<String> streamToList(InputStream inputStream, List<String> list) throws IOException {
+    public List<String> streamToList(InputStream inputStream) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+        List<String>  list = new ArrayList<String>();
         String line;
         while ((line = bufferedReader.readLine())!=null){
-            list = linesList(line);
+            list = linesToList(line);
         }
         return list;
     }
