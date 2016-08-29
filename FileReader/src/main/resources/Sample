@@ -1,0 +1,5 @@
+We're creating a new project in IntelliJ and must have something wrong because when we right click on a directory, select New and then get the context menu, Java based options are not shown. Currently get things like File, some HTML options, XML options.
+The directory or one of the parent directories must be marked as Source Root (In this case, it appears in blue).
+If you open your module settings (F4) you can nominate which paths contain 'source'. Intellij will then mark these directories in blue and allow you to add classes etc.
+This can also happen if your package name is invalid.
+For example, if your "package" is com.my-company (which is not a valid Java package name due to the dash), IntelliJ will prevent you from creating a Java Class in that package.

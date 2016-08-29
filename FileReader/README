@@ -1,0 +1,2 @@
+Write a program that opens a file and reads its lines one at a time, storing each line in a List sorted using String.compareTo.
+
